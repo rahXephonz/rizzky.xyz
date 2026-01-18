@@ -1,5 +1,4 @@
 ---
-import Analytics from "@vercel/analytics/astro";
 import { Navbar } from "../components";
 ---
 
@@ -8,14 +7,13 @@ import { Navbar } from "../components";
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <Analytics />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
     <meta
       name="description"
       content="I'm Ryy, a software engineer. Against the odds. And love FP."
     />
-    <title>Ryy - Software Engineer</title>
+    <title>Rizzky - Software Engineer</title>
   </head>
   <body>
     <Navbar client:load />
@@ -37,3 +35,12 @@ import { Navbar } from "../components";
     height: 100%;
   }
 </style>
+
+<script>
+  import Hotjar from "@hotjar/browser";
+
+  const siteId = 3555322;
+  const hotjarVersion = 6;
+
+  Hotjar.init(siteId, hotjarVersion);
+</script>
